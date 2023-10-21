@@ -8,6 +8,11 @@
 255.255.255.255	broadcasthost
 ::1             localhost
 
-# Block YouTube
-0.0.0.0 youtube.com www.youtube.com m.youtube.com
+127.0.0.1 youtube.com www.youtube.com m.youtube.com 
+127.0.0.1 roblox.com www.roblox.com
+127.0.0.1 www.blooket.com dashboard.blooket.com id.blooket.com goldquest.blooket.com
+
+
 ::1 youtube.com www.youtube.com m.youtube.com
+::1  roblox.com www.roblox.com
+::1  www.blooket.com dashboard.blooket.com id.blooket.com goldquest.blooket.com
