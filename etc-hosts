@@ -8,11 +8,33 @@
 255.255.255.255	broadcasthost
 ::1             localhost
 
-127.0.0.1 youtube.com www.youtube.com m.youtube.com 
 127.0.0.1 roblox.com www.roblox.com
 127.0.0.1 www.blooket.com dashboard.blooket.com id.blooket.com goldquest.blooket.com
 
 
-::1 youtube.com www.youtube.com m.youtube.com
 ::1 roblox.com www.roblox.com
 ::1 www.blooket.com dashboard.blooket.com id.blooket.com goldquest.blooket.com
+
+
+
+::1 youtube.com
+::1 www.youtube.com
+::1 m.youtube.com
+::1 youtubei.googleapis.com
+::1 youtube.googleapis.com
+::1 youtu.be
+::1 s.ytimg.com
+::1 ytimg.com
+::1 i.ytimg.com
+
+
+
+127.0.0.1 youtube.com
+127.0.0.1 www.youtube.com
+127.0.0.1 m.youtube.com
+127.0.0.1 youtubei.googleapis.com
+127.0.0.1 youtube.googleapis.com
+127.0.0.1 youtu.be
+127.0.0.1 s.ytimg.com
+127.0.0.1 ytimg.com
+127.0.0.1 i.ytimg.com
