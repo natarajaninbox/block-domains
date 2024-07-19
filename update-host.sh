@@ -5,7 +5,7 @@ TMP_HOST_FILE=/tmp/etc-hosts
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 # Download the file from GitHub
-curl -H "Cache-Control: no-cache" -L -o $TMP_HOST_FILE https://raw.githubusercontent.com/natarajaninbox/block-domains/main/etc-hosts
+wget --no-cache -O $TMP_HOST_FILE https://raw.githubusercontent.com/natarajaninbox/block-domains/main/etc-hosts
 
 # Check if the temporary file was successfully downloaded
 if [[ ! -f $TMP_HOST_FILE ]]; then
