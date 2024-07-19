@@ -4,7 +4,16 @@ HOST_FILE=/etc/hosts
 TMP_HOST_FILE=/tmp/etc-hosts
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
-wget -q https://raw.githubusercontent.com/natarajaninbox/block-domains/main/etc-hosts -O $TMP_HOST_FILE || exit 1
+#rm -rf $TMP_HOST_FILE
+
+#wget  -q https://raw.githubusercontent.com/natarajaninbox/block-domains/main/etc-hosts -O $TMP_HOST_FILE || exit 1
+
+curl -o $TMP_HOST_FILE https://raw.githubusercontent.com/natarajaninbox/block-domains/main/etc-hosts
+
+
+
+
+
 
 # Get the checksum of the current file
 checksum=$(md5 -q $HOST_FILE)
