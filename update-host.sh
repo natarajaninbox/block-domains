@@ -1,10 +1,10 @@
 #!/bin/bash
 
 HOST_FILE=/etc/hosts
-TMP_HOST_FILE=/tmp/etc-hosts
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
+TMP_HOST_FILE=/tmp/etc-hosts_$TIMESTAMP
 
-# Download the file from GitHub
+# Use wget to download the file
 wget --no-cache -O $TMP_HOST_FILE https://raw.githubusercontent.com/natarajaninbox/block-domains/main/etc-hosts
 
 # Check if the temporary file was successfully downloaded
@@ -27,6 +27,11 @@ if [[ "$checksum" != "$github_checksum" ]]; then
   echo "Updating local etc-hosts file"
   cp $HOST_FILE $HOST_FILE.$TIMESTAMP.bak
   mv $TMP_HOST_FILE $HOST_FILE
+  
+  # Refresh DNS cache
+  sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+  
+  echo "DNS cache refreshed."
 else
   echo "No update needed. The files are identical."
 fi
